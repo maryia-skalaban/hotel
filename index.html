@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Coast Resort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Azure Coast Resort</div>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header"); 
+
+        if (window.scrollY > 0) {
+        header.classList.add("sticky");
+        } else {
+        header.classList.remove("sticky");
+        }
+        });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".nav-links");
+      const header = document.querySelector(".header");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        nav.classList.toggle("active");
+        header.classList.toggle("menu-open");
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          burger.classList.remove("open");
+          nav.classList.remove("active");
+          header.classList.remove("menu-open");
+        });
+      });
+    });
+    </script>
+
+    <div class="hero-image">
+        <img src="img/hero.jpg" alt="Azure Coast Resort">
+        <div class="centered">
+            <h1>AZURE COAST RESORT</h1>
+            <p>Lazur Retreat & Ocean View</p>
+        </div>
+    </div>
+    <main>
+      <section id="home" class="section">
+        <h2>Welcome to Azure Coast Resort</h2>
+        <p>
+          Discover your perfect getaway at Azure Coast Resort, where pristine turquoise waters meet white sandy beaches. Enjoy luxurious comfort, breathtaking views, and exceptional service designed just for you.
+          Our resort offers a unique blend of relaxation and adventure, ensuring every moment is memorable.
+        </p>
+      </section>
+
+      <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>
+          Azure Coast Resort is a paradise for those seeking tranquility and elegance. Our resort combines modern architecture with the breathtaking beauty of nature, providing guests with a sanctuary away from the everyday hustle.
+        </p>
+        <p>
+          Whether you’re lounging by our infinity pool, indulging in a spa treatment, or savoring gourmet cuisine with an ocean view, every experience is crafted with care and attention to detail.
+        </p>
+      </section>
+
+      <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <img src="img/recreation-area.avif" alt="Recreation Area">
+          <img src="img/recreation-area-zoom.avif" alt="Recreation Area Zoomed">
+          <img src="img/pool.avif" alt="Pool">
+          <img src="img/villa.avif" alt="Villa">
+          <img src="img/hotel.avif" alt="Hotel">
+          <img src="img/bar.avif" alt="Bar">
+          <img src="img/restaurant.avif" alt="Restaurant">
+          <img src="img/food.avif" alt="Food">
+          <img src="img/food-a.avif" alt="Food">
+          <img src="img/breakfast.avif" alt="Breakfast">
+          <img src="img/bedroom.avif" alt="Bedroom">
+          <img src="img/bathroom.avif" alt="Bathroom">
+        </div>
+      </section>
+
+      <section id="rooms" class="section">
+        <h2>Our Rooms</h2>
+        <p>
+          Choose from a variety of beautifully appointed rooms and suites. Each space is designed to maximize comfort and showcase stunning views, whether of the ocean, lush gardens, or tranquil pools.
+        </p>
+        <p class="room">Overwater Villas with private decks and direct sea access</p>
+        <p class="room">Beachfront Suites featuring panoramic ocean views</p>
+        <p class="room">Garden Rooms nestled among tropical greenery</p>
+        <p class="room">Family-friendly accommodations with spacious layouts and amenities</p>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>
+          Have questions or ready to book your stay? Our friendly team is here to assist you.
+          Reach out by phone or email, or visit us at the resort for a personal tour.
+        </p>
+        <p>
+          <strong>Phone:</strong> +123 456 789<br />
+          <strong>Email:</strong> contact@azurecoastresort.com
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Elements Hotel. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
